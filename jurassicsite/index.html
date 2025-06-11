@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park - Experiência Imersiva</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeButton" aria-label="Alternar modo escuro">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Jurassic Park Logo">
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre o Parque</a></li>
+            <li><a href="#dinos">Dinossauros</a></li>
+            <li><a href="#map">Mapa</a></li>
+            <li><a href="#security">Segurança</a></li>
+            <li><a href="#news">Notícias</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="images/logo.png" alt="Jurassic Park Logo" class="main-logo">
+                </div>
+                <h1 class="hero-title">Bem-vindo ao Jurassic Park</h1>
+                <p class="hero-subtitle">Onde o passado ganha vida</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Espécies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000</span>
+                        <span class="stat-label">Hectares</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Monitoramento</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button class="primary-btn">
+                        <i class="fas fa-ticket-alt"></i>
+                        Comprar Ingressos
+                    </button>
+                    <button class="secondary-btn">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Explorar o Parque
+                    </button>
+                </div>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Segurança Máxima</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-microscope"></i>
+                        <span>Pesquisa Avançada</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <span>Preservação Natural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Role para explorar</span>
+                <i class="fas fa-chevron-down bounce"></i>
+            </div>
+            <div class="security-alert" id="securityAlert">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Sistema de Segurança Ativo</span>
+            </div>
+            <div class="hero-particles"></div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Sobre o Parque</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">1990</div>
+                        <div class="content">
+                            <h3>Descoberta da Ilha</h3>
+                            <p>Ilha Nublar é escolhida para sediar o parque mais revolucionário do mundo.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">1993</div>
+                        <div class="content">
+                            <h3>Inauguração</h3>
+                            <p>Jurassic Park abre suas portas para os primeiros visitantes.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2024</div>
+                        <div class="content">
+                            <h3>Nova Era</h3>
+                            <p>Reabertura com tecnologia de ponta e novas espécies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dinos" class="dinos-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Dinossauros</h2>
+                <div class="dino-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="carnivoro">Carnívoros</button>
+                    <button class="filter-btn" data-filter="herbivoro">Herbívoros</button>
+                    <button class="filter-btn" data-filter="voador">Voadores</button>
+                    <button class="filter-btn" data-filter="aquatico">Aquáticos</button>
+                </div>
+                <div class="dino-grid">
+                    <div class="dino-card" data-category="carnivoro">
+                        <img src="images/dinos/t-rex.jpg" alt="Tyrannosaurus Rex">
+                        <div class="dino-info">
+                            <h3>Tyrannosaurus Rex</h3>
+                            <p class="scientific-name">T. Rex</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Extremo</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+
+                    <div class="dino-card" data-category="carnivoro">
+                        <img src="images/dinos/velociraptor.jpg" alt="Velociraptor">
+                        <div class="dino-info">
+                            <h3>Velociraptor</h3>
+                            <p class="scientific-name">V. mongoliensis</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Alto</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+
+                    <div class="dino-card" data-category="herbivoro">
+                        <img src="images/dinos/triceratops.jpg" alt="Triceratops">
+                        <div class="dino-info">
+                            <h3>Triceratops</h3>
+                            <p class="scientific-name">T. horridus</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Médio</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+
+                    <div class="dino-card" data-category="voador">
+                        <img src="images/dinos/pterodactyl.jpg" alt="Pterodactyl">
+                        <div class="dino-info">
+                            <h3>Pterodáctilo</h3>
+                            <p class="scientific-name">P. antiquus</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Alto</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+
+                    <div class="dino-card" data-category="aquatico">
+                        <img src="images/dinos/mosasaurus.jpg" alt="Mosasaurus">
+                        <div class="dino-info">
+                            <h3>Mosassauro</h3>
+                            <p class="scientific-name">M. hoffmannii</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Extremo</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+
+                    <div class="dino-card" data-category="herbivoro">
+                        <img src="images/dinos/brachiosaurus.jpg" alt="Brachiosaurus">
+                        <div class="dino-info">
+                            <h3>Braquiossauro</h3>
+                            <p class="scientific-name">B. altithorax</p>
+                            <div class="danger-level">
+                                <span class="danger-icon">⚠️</span>
+                                <span class="danger-text">Nível de Perigo: Baixo</span>
+                            </div>
+                            <button class="info-btn">Mais Informações</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map-section">
+            <div class="container">
+                <h2 class="section-title">Mapa do Parque</h2>
+                <div class="map-container">
+                    <div class="map-overlay">
+                        <div class="radar-overlay"></div>
+                        <div class="map-controls">
+                            <button class="map-btn" data-area="visitor">Área de Visitantes</button>
+                            <button class="map-btn" data-area="paddocks">Recintos</button>
+                            <button class="map-btn" data-area="lab">Laboratório</button>
+                            <button class="map-btn" data-area="security">Centro de Segurança</button>
+                        </div>
+                    </div>
+                    <div id="parkMap" class="park-map">
+                        <!-- Mapa interativo será carregado aqui -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="security-section">
+            <div class="container">
+                <h2 class="section-title">Sistema de Segurança</h2>
+                <div class="security-grid">
+                    <div class="security-panel">
+                        <h3>Status das Cercas Elétricas</h3>
+                        <div class="fence-status">
+                            <div class="status-item active">
+                                <span class="status-label">Setor A</span>
+                                <span class="status-indicator"></span>
+                            </div>
+                            <div class="status-item active">
+                                <span class="status-label">Setor B</span>
+                                <span class="status-indicator"></span>
+                            </div>
+                            <div class="status-item warning">
+                                <span class="status-label">Setor C</span>
+                                <span class="status-indicator"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <h3>Câmeras de Segurança</h3>
+                        <div class="camera-grid">
+                            <div class="camera-view" data-camera="1">
+                                <div class="camera-overlay">CAM 01</div>
+                            </div>
+                            <div class="camera-view" data-camera="2">
+                                <div class="camera-overlay">CAM 02</div>
+                            </div>
+                            <div class="camera-view" data-camera="3">
+                                <div class="camera-overlay">CAM 03</div>
+                            </div>
+                            <div class="camera-view" data-camera="4">
+                                <div class="camera-overlay">CAM 04</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <div class="container">
+                <h2 class="section-title">Últimas Notícias</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <img src="images/news/lab-discovery.jpg" alt="Nova Descoberta">
+                        <div class="news-content">
+                            <h3>Nova Espécie Descoberta</h3>
+                            <p class="news-date">15 de Março, 2024</p>
+                            <p class="news-excerpt">Cientistas do parque anunciam a descoberta de uma nova espécie de dinossauro.</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </article>
+                    <!-- Mais notícias serão adicionadas dinamicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Ilha Nublar, Costa Rica</li>
+                            <li><i class="fas fa-phone"></i> +55 (11) 1234-5678</li>
+                            <li><i class="fas fa-envelope"></i> contato@jurassicpark.com</li>
+                        </ul>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject">
+                                <option value="visita">Agendar Visita</option>
+                                <option value="seguranca">Relatar Problema de Segurança</option>
+                                <option value="info">Informações Gerais</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="primary-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-small.png" alt="Jurassic Park">
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#security">Segurança</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jurassic Park. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 
